@@ -1,0 +1,15 @@
+{{#if newForm}}
+  <form action="index.html" method="post">
+    <label for="title">Title</label>
+    {{input value=title id="title"}}
+    <label for="body">Body</label>
+    {{input value=body id="body"}}
+    <label for="category">Category</label>
+    {{input value=category id="category"}}
+    <label for="tag">Tag</label>
+    {{input value=tag id="tag"}}
+    <button type="submit" {{action 'saveEntry'}}>Save</button>
+  </form>
+{{else}}
+  <button {{action 'formShow'}}>New Entry</button>
+{{/if}}

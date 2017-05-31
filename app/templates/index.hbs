@@ -1,0 +1,8 @@
+<h1>Ember Sucks</h1>
+<ul>
+  {{#each model as |entry|}}
+    {{entry-tile entry=entry}}
+  {{/each}}
+</ul>
+
+{{entry-form saveEntry='saveEntry'}}

@@ -1,0 +1,13 @@
+<h5>Date: {{comment.date}}</h5>
+
+<p>{{comment.body}}</p>
+
+{{#if updateFormShow}}
+  <form>
+    {{input value=commentBody id='commentBody'}}
+    <button {{action 'updateComment' comment}}>Edit Comment</button>
+  </form>
+{{else}}
+  <button {{action 'showCommentForm'}}>Edit Comment</button>
+{{/if}}
+<button {{action 'deleteComment' comment}}>Delete</button>

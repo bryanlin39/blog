@@ -7,7 +7,6 @@ export default Ember.Component.extend({
       this.set('updateForm', true);
     },
     updateEntry: function(entry){
-              console.log(this)
       var params = {
         title: this.get('title'),
         body: this.get('body'),

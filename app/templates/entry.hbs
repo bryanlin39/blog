@@ -1,3 +1,12 @@
-{{entry-detail entry=model destroyEntry='destroyEntry'}}
+{{entry-detail entry=model.entry destroyEntry='destroyEntry'}}
 
-{{entry-update entry=model updateEntry='updateEntry'}}
+{{entry-update entry=model.entry updateEntry='updateEntry'}}
+
+{{new-comment saveComment='saveComment' entry=model.entry}}
+
+<h3>Comments:</h3>
+<ul>
+  {{#each model.entry.comments as |comment|}}
+    {{comment-tile comment=comment updateComment='updateComment' deleteComment='deleteComment'}}
+  {{/each}}
+</ul>

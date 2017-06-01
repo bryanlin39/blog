@@ -1,6 +1,7 @@
 <h1>Ember Sucks</h1>
+
 <ul>
-  {{#each model as |entry|}}
+  {{#each model.entries as |entry|}}
     {{entry-tile entry=entry}}
   {{/each}}
 </ul>
